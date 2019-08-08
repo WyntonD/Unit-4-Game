@@ -1,1 +1,24 @@
-Hello
+#main-title{
+    color:#eee;
+    background-color:orangered;
+}
+
+#paraOne {
+    color:green;
+    background-color:beige;
+    
+}
+
+#paraTwo{
+    background-color:aqua;
+    color:#000;  
+}
+
+#rand-num {
+    background-color:green;
+}
+
+#total-score-text, #total-score {
+color:#eee;
+background-color: teal;
+}
