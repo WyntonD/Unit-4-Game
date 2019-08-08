@@ -7,21 +7,85 @@
     <title>Document</title>
     <style rel="stylsheet" type="text/css" href="../Unit-4-Game/assets/css/style.css"></style>
     <style rel="stylesheet" type= "text/css" href ="../Unit-4-Game/assets/css/reset.css"></style>
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 
 </head>
 <body>
-    
-    
-<script type= "text/javascript">
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id ="main-title">
+                <h1>CrystalCollector!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="paras">
+                <p>
+                    You will be given a random number at the start of the game.
+                </p>
+                <br/>
+                <p>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                </p>
+                <br/>
+                <p>
+                    You win the game by matching your total score to random numnber, you lose the game if your total score goes above the random number.    
+                </p>
+                <br/>
+                <p>
+                    The value of each crystal is hidden from you until you click on it.
+                </p>
+                <br/>
+                <p>
+                    Each time when the game starts, the game will change the values of each crystal.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-4" id="rand-num">
+                <!-- Random number -->
+            </div>
+            <div class="col-md-2">
+                <div class="paraTwo">
+                <p id ="wins">
+                    Wins:
+                </p>
+                <br/>
+                <p id="losses">
+                    Losses:
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-md-2">
+                <!-- Image 1 -->
+            </div>
+            <div class = "col-md-2">
+                <!-- Image 2 -->
+            </div>
+            <div class = "col-md-2">
+                <!-- Image 3 -->
+            </div>
+            <div class = "col-md-2">
+                <!-- Image 4 -->
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-4">
+                Your total score:
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-4" id="total-score">
+                <!-- SCORE -->
+            </div>
+            
+        </div>
 
+    </div>
 
-
-
-
-
-
-</script>
+ <script src="Unit-4-Game/assets/javascript/game.js"></script>
 </body>
 </html>
