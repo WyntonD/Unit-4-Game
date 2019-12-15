@@ -1,67 +1,97 @@
-var wins = 0;
-var losses = 0;
-var totalScore = " ";
-
-var wrongScore= [];
-var rightScore = [];
-
-
-var rubyNumber = " ";
-var diamondNumber = " ";
-var goldNumber = " ";
-var emeraldNumber = " ";
-
-var isTotal =false;
-
-var crystalNumbers = Math.floor(Math.random() * (12) + 1);
-var randomTotal = Math.floor(Math.random() * (101) + 19);
-
-var goalNumber = randomTotal
-
-
-console.log(crystalNumbers);
-console.log(randomTotal);
-
-
-$("#ruby").on("click", function() {
-    console.log(Math.floor(Math.random(crystalNumbers)))
-    $("#total-score")
-})
-$("#diamond").on("click", function() {
-    console.log(crystalNumbers);
-})
-$("#gold").on("click", function() {
-    console.log(crystalNumbers);
-})
-$("#emerald").on("click", function() {
-    console.log(Math.floor(Math.random(crystalNumbers)));
-})
-
-
-function startGame() {
-
-    wins = 0;
-    losses = 0;
-
-    console.log($("#rand-num").html(randomTotal));
-
-}
-
-startGame();
-
-if (goalNumber === totalScore) {
+$( document ).ready(function(){
+    // Generates random number to guess
+    var Random=Math.floor(Math.random()*102+19)
     
-    wins++;
-   
-    $("#paraTwo").html("You Win!!")
+    // Display random number
+    $('#target-score').text("Target Score:" + Random);
     
-    startGame();
-}
-
-else {
+    //Generate random number for each crystal
+    var num1= Math.floor(Math.random()*12+1)
+    var num2= Math.floor(Math.random()*12+1)
+    var num3= Math.floor(Math.random()*12+1)
+    var num4= Math.floor(Math.random()*12+1)
+    
+    // Variables to keep track of wins, losses and total
+    var playerTotal= 0; 
+    var wins= 0;
+    var losses = 0;
+    
+  
+  $('#win').text("Wins: " + wins);
+  $('#lost').text("Losses:" + losses);
+  
+  // Reset game
+  function reset(){
+        Random=Math.floor(Math.random()*102+19);
+        console.log(Random)
+        $('#target-score').text("Target Score: " + Random);
+        num1= Math.floor(Math.random()*12+1);
+        num2= Math.floor(Math.random()*12+1);
+        num3= Math.floor(Math.random()*12+1);
+        num4= Math.floor(Math.random()*12+1);
+        playerTotal= 0;
+        $('#total-score-text').text(playerTotal);
+        } 
+  // Display wins
+  function woohoo(){
+  alert("Congrats, you won!");
+    wins++; 
+    $('#win').text("Wins: " + wins);
+    reset();
+  }
+  // Display losses
+  function loser(){
+  alert ("Sorry, you lose!");
     losses++;
-   
-    $("#paraOne").html("You Lose!")
-   
-    startGame();
-}
+    $('#lost').text("Losses:" + losses);
+    reset()
+  }
+  // Clicking crystals
+    $('#ruby').on ('click', function(){
+      playerTotal = playerTotal + num1;
+      console.log("Player's total score = " + playerTotal);
+      $('#total-score-text').text("Your total: " + playerTotal); 
+            //Win & lose conditions
+          if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          }   
+    })  
+    $('#gold').on ('click', function(){
+      playerTotal = playerTotal + num2;
+      console.log("Player's total score = " + playerTotal);
+      $('#total-score-text').text("Your total: " + playerTotal); 
+          if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          } 
+    })  
+    $('#diamond').on ('click', function(){
+      playerTotal = playerTotal + num3;
+      console.log("Player's total score = " + playerTotal);
+      $('#total-score-text').text("Your total: " + playerTotal);
+  
+            if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          } 
+    })  
+    $('#emerald').on ('click', function(){
+      playerTotal = playerTotal + num4;
+      console.log("Player's total score = " + playerTotal);
+      $('#total-score-text').text("Your total: " + playerTotal); 
+        
+            if (playerTotal == Random){
+            woohoo();
+          }
+          else if ( playerTotal > Random){
+            loser();
+          }
+    });   
+  }); 

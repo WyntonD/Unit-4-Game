@@ -1,12 +1,33 @@
+* {
+    border-style: border-box;
+}
+
+body {
+    background-image: img src="https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg";
+}
+
 #main-title{
     color:#eee;
     background-color:orangered;
+    font-size:50px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom: 7px;
 }
 
 #paraOne {
     color:green;
     background-color:beige;
+    margin-left:5px;
+    margin-bottom:7px;
+    font:bold;
     
+}
+
+#rand-num {
+    background-color:green;
+    color:purple;
+    font-size: 25px;
 }
 
 #paraTwo{
@@ -16,9 +37,25 @@
 
 #rand-num {
     background-color:green;
+    color:#eee;
+    font-size:55px;
+    margin-bottom:7px;
+}
+
+#total-score {
+    margin-bottom: 10px;
+    
+}
+
+#total-score-text {
+    height:50px;
 }
 
 #total-score-text, #total-score {
 color:#eee;
 background-color: teal;
+}
+
+#pics {
+    display: inline;
 }
