@@ -49,6 +49,7 @@ body {
 
 #total-score-text {
     height:50px;
+    width:100%;
 }
 
 #total-score-text, #total-score {
